@@ -34,7 +34,7 @@ elif opt == 2:
     color = int(input("BGR selection: [1. BLUE] [2. GREEN] [3. RED]: "))
     c=color-1
     print(img.item(x, y , c))
-    print(c)
+
 
 elif opt == 3:
     x = int(input("for x axis: "))
