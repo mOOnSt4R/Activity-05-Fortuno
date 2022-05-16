@@ -32,7 +32,9 @@ elif opt == 2:
     x = int(input("for x axis: "))
     y = int(input("for y axis: "))
     color = int(input("BGR selection: [1. BLUE] [2. GREEN] [3. RED]: "))
-    print(img.item(x, y , color))
+    c=color-1
+    print(img.item(x, y , c))
+    print(c)
 
 elif opt == 3:
     x = int(input("for x axis: "))
@@ -41,7 +43,8 @@ elif opt == 3:
     for i in range(0, 3, 1):
         color = int(input("BGR selection: [1. BLUE] [2. GREEN] [3. RED]: "))
         pixelValue = int(input("Pixel Value: "))
-        img.itemset((x, y, color), pixelValue)
+        c=color-1
+        img.itemset((x, y, c), pixelValue)
     print(img[x, y])
     cv.imshow("colored", img)
     cv.waitKey(0)
